@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<servlet>
+		<servlet-name>mainServlet</servlet-name>
+		<servlet-class>com.qianjg.servlet.MainServlet</servlet-class>
+	</servlet>
+
+	<!--url-pattern中配置的/mainServlet用于指定该Servlet的访问路径 -->
+	<servlet-mapping>
+		<servlet-name>mainServlet</servlet-name>
+		<url-pattern>/mainServlet</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>com.qianjg.createmenu.MenuManager</listener-class>
+	</listener>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
